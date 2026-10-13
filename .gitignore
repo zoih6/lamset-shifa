@@ -26,3 +26,4 @@ tmp/
 film/audio/*.wav
 film/audio/browse.png
 film/audio/cues_sample.json
+node_modules

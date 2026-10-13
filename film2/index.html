@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Lamset Shifa v2 · «الخط الواحد» · Reels</title>
+<link rel="stylesheet" href="kit/fonts/fonts.css">
+<style>html,body{margin:0;background:#111}canvas{display:block;height:100vh;width:auto;margin:auto}</style></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script src="kit/fonts/fonts.js"></script>
+<script>
+window.FILM = {
+  fps: 30,
+  palette: { bg: '#063c36', ink: '#f7f2e6', gold: '#e9c46b', goldL: '#f3d78f', goldD: '#b8913c', cream: '#f7f2e6' },
+  display: 'Readex', ui: 'PlexArabic', typeScale: 1,
+  fonts: ['700 60px Readex', '500 60px Readex', '300 60px Readex', '700 60px PlexArabic', '400 60px PlexArabic'],
+  kt: { ink: '#f7f2e6', accent: '#e9c46b', dim: '#5f8a82', bg: '#063c36' },
+  textures: { paper_cream: 'kit/textures/paper_cream.jpg', bg_dark: 'kit/textures/bg_dark.jpg' },
+  tin: 'cut',
+  post: t => STAGE.post(t),
+};
+</script>
+<script src="../film/core.js"></script>
+<script src="../film/helpers.js"></script>
+<script src="../film/fx.js"></script>
+<script src="../film/type.js"></script>
+<script src="kit/data/icons_lucide.js"></script>
+<script src="../film/assets.js"></script>
+<script src="../film/cues.js"></script>
+<script src="line.js"></script>
+<script src="scenes/stage.js"></script>
+<script src="scenes/a_open.js"></script>
+<script src="scenes/take.js"></script>
+<script>init();</script>
+</body></html>

@@ -1,0 +1,10 @@
+sound-layer/
+audio/kit/
+audio/stems/
+audio/candidates/
+audio/_raw/
+out/
+tmp/
+audio/*.wav
+audio/cues_sample.json
+dbg.mjs
