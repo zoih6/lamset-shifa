@@ -1,0 +1,7 @@
+# تجاهل مجلدات الرندر المؤقتة
+film/tmp/
+tmp/
+node_modules/
+film/out/
+out/
+*.log
