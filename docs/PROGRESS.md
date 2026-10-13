@@ -16,3 +16,22 @@ PAGE=index.html ../tools/cs.sh check 6 1 3 5.3 6.5 10.5 15.8      # contact shee
 PAGE=index.html node ../tools/render.mjs --from 0 --to 16.8 --out out/sample_video.mp4 --workers 1
 PAGE=index.html node ../tools/export_cues.mjs && uv run sound-layer/scripts/mix.py audio/cues.json
 ```
+
+---
+# v2 «الخط الواحد» (one line, one take) — started 2026-10-13
+Brief + storyboard: `docs/v2/brief.md` · project: `film2/` (engine files are loaded from `../film/`; `film2/kit` → `../film/kit`).
+Rebuild the sound inputs (ignored files), from `film2/`:
+- `../tools/sound_layer.sh setup . && ../tools/sound_layer.sh kit .`
+- `ffmpeg -i audio/music_src.mp3 -ar 48000 -ac 2 audio/music.wav`
+- `ffmpeg -i ../VID-…aac -ar 48000 -ac 1 audio/vo.wav`
+
+| Part | Span (s) | Status |
+|---|---|---|
+| A: touch, footsteps, «نحن هنا», stairs/star, seal, fingerprint | 0–16.8 | ✅ sample rendered (`--sub 6`), sound QA PASS → pre-release `v2-sample` |
+| B: discover/grow, 8 services | 16.8–37.3 | ⏳ after sample approval |
+| C: steps / heart / family / growth / day, journey pull-back, contact, end card | 37.3–61.3 | ⏳ |
+| D: Wamd outro | 61.3–64.8 | ⏳ |
+
+**Lessons (v2):**
+- qa.py `appear` needs a change ≥ 3× the local motion. In a one-take world the camera is always moving, so hero beats need a hard single-frame event (a `cut` word plus a 1-frame light flash). Find the true frame by frame-diffing the render, then put the cue there.
+- Fast camera pans ghost with 2–3 sub-frames. Use a zoom-out "swoop" (lower screen speed) and `--sub 6`.

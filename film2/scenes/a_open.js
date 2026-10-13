@@ -89,27 +89,31 @@
 
   // ── camera (world framing) ─────────────────────────────────────────────────────────────────────────
   const ZA = 1.7, ZB = 1.12;
-  LCAM.key(0, O[0] * .5, O[1] - 200 / ZA, ZA, 0, true);
+  LCAM.key(0, O[0], O[1] - 40, 3.4, -.04, true);
+  LCAM.key(.42, O[0] * .8, O[1] - 90, 2.6, -.02);
   LCAM.key(.9, O[0] * .4, O[1] - 230 / ZA - 30, ZA);
   PH.forEach((h, i) => { const z = lerp(ZA, ZB, i / 6); LCAM.key(PT[i] + PD[i] * .6, i % 2 ? 20 : -20, PY[i] - 260 / z, z, (i % 2 ? .012 : -.012)); });
   LCAM.key(5.22, 0, -1300, 1.05, 0);
   LCAM.key(5.60, 0, -1068, .67, 0, true);                                     // pull back: the steps grew
   LCAM.key(6.30, 0, -1585, 1.0, 0);
   LCAM.key(7.55, 0, -1600, 1.02, 0, true);
+  LCAM.key(8.00, 0, -1940, .80, -.01);
   LCAM.key(8.45, 0, -2290, .95, -.025);
   LCAM.key(9.05, 0, -2310, .96, -.025, true);
-  LCAM.key(9.75, 0, M[1] + 270, .90, 0);
-  LCAM.key(13.80, 0, M[1] + 280, .935, 0, true);
-  LCAM.key(14.45, 0, F[1] - 30, .95, .02);
+  LCAM.key(9.40, 120, (-2310 + M[1] + 270) / 2, .58, .03);
+  LCAM.key(9.80, 0, M[1] + 270, .90, 0);
+  LCAM.key(13.50, 0, M[1] + 280, .935, 0, true);
+  LCAM.key(14.02, -140, (M[1] + 280 + F[1] - 30) / 2, .56, -.02);
+  LCAM.key(14.55, 0, F[1] - 30, .95, .02);
   LCAM.key(16.84, 0, F[1] - 40, .99, .02);
 
   // ── sound ──
   cue.appear('touch', .02, { sound: 'pop/fs-253956-bubble-pop-1' });
-  cue.hero('kabir', when.spring(5.20, 'pop'), { on: 'appear', sound: 'thump/fs-133282-thump-on-carpet-2+tap' });
+  cue.hero('kabir', 5.267, { on: 'appear', sound: 'thump/fs-133282-thump-on-carpet-2+tap' });
   cue.move('fly1', when.ease(5.62, 6.30), { sound: 'whoosh/fs-449992-whoosh-short-low-wav-1' });
   cue.appear('star', 8.62, { sound: 'chime' });
-  cue.hero('seal', when.spring(10.36, 'pop'), { on: 'appear', sound: 'thump/fs-187136-body-fall-wav-1+tap' });
-  cue.move('fly3', when.ease(13.85, 14.45), { sound: 'whoosh/fs-449994-whoosh-med-mid-wav-1' });
+  cue.hero('seal', 10.533, { on: 'appear', sound: 'thump/fs-187136-body-fall-wav-1+tap' });
+  cue.move('fly3', when.ease(13.50, 14.55), { sound: 'whoosh/fs-449994-whoosh-med-mid-wav-1' });
 
   // ── world layers ───────────────────────────────────────────────────────────────────────────────────
   INITS.push(async () => {
@@ -120,8 +124,10 @@
   });
   WORLD.under.push((t) => {
     // touch ripples
-    [0, .14].forEach((d) => { const k = clamp((t - .02 - d) / .9); if (k <= 0 || k >= 1) return; g.save(); g.strokeStyle = LP.gold; g.globalAlpha = (1 - k) * .55; g.lineWidth = 3 / LCAM.now.z;
-      g.beginPath(); g.arc(O[0], O[1], 18 + 150 * KT.eOut(k), 0, 7); g.stroke(); g.restore(); });
+    [0, .13, .26].forEach((d, j) => { const k = clamp((t - .04 - d) / 1.0); if (k <= 0 || k >= 1) return; g.save(); g.strokeStyle = j ? LP.mint : LP.gold; g.globalAlpha = (1 - k) * (j ? .45 : .8); g.lineWidth = (j ? 3 : 5) / LCAM.now.z;
+      g.beginPath(); g.arc(O[0], O[1], 10 + 170 * KT.eOut(k), 0, 7); g.stroke(); g.restore(); });
+    // the first touch lands: a soft gold disc shrinks into the pen
+    { const k = clamp(t / .32); if (k < 1) { g.save(); g.fillStyle = LP.gold; g.globalAlpha = .9 * (1 - k); g.beginPath(); g.arc(O[0], O[1], (6 + 40 * (1 - KT.eOut(k))) / LCAM.now.z * 1.6, 0, 7); g.fill(); g.restore(); } }
     // emblem inside the seal
     const k = KT.spr(t - 10.36, 'pop'); if (k > 0 && A.emblem) { const w = (R - 22) * 2 * .8 * Math.max(0, k), h = w * A.emblem.height / A.emblem.width;
       g.save(); g.translate(M[0], M[1] + 4); g.rotate((1 - Math.min(1, k)) * -.25); g.drawImage(A.emblem, -w / 2, -h / 2, w, h); g.restore(); }
@@ -133,8 +139,8 @@
     wtext(T.wus, t, { wx: -120, wy: -2640, t0: 7.78, in: 'rise', dist: 30 });
     wtext(T.afd, t, { wx: -120, wy: -2485, t0: 8.62, in: 'pop', spring: 'pop' });
     // the seal's wordmark + subtitles written by the pen
-    if (A.wmark) { const k = KT.spr(t - 10.56, 'card'); if (k > 0) { const c = LCAM.now, ww = 700 * c.z, hh = ww * A.wmark.height / A.wmark.width, [x, y] = LCAM.w2s(M[0], M[1] + R + 105 + (1 - Math.min(1, k)) * 40);
-      g.save(); g.globalAlpha = clamp(k * 2); g.translate(x, y); g.rotate(c.r); g.drawImage(A.wmark, -ww / 2, -hh / 2, ww, hh); g.restore(); } }
+    if (A.wmark && t >= 10.525) { const k = KT.eOut((t - 10.525) / .3); { const c = LCAM.now, ww = 700 * c.z * lerp(1.08, 1, k), hh = ww * A.wmark.height / A.wmark.width, [x, y] = LCAM.w2s(M[0], M[1] + R + 105);
+      g.save(); g.translate(x, y); g.rotate(c.r); g.drawImage(A.wmark, -ww / 2, -hh / 2, ww, hh); g.restore(); } }
     const pk = (a, b) => clamp((LINE.head(t) - LINE.M[a]) / (LINE.M[b] - LINE.M[a]));
     wpen(T.ilaj, t, { wx: 0, wy: UL1 }, pk('ul1A', 'ul1B'));
     wpen(T.taa, t, { wx: 0, wy: UL2 }, pk('ul2A', 'ul2B'));
@@ -144,6 +150,11 @@
     wtext(T.eht, t, { wx: 0, wy: F[1] + 478, t0: 15.92, in: 'mask' });
   });
   // screen-space words of the hook (the camera is zooming under them)
+  // «احتياجاتها»: a wave of light runs out through the ridges
+  (WORLD.lineFx = WORLD.lineFx || []).push((t, px, c) => {
+    const k = (t - 15.90) / .85; if (k <= 0 || k >= 1) return; const a = LINE.M.fpA, b = LINE.M.fpB, hd = lerp(b, a, KT.eInOut(k)), band = 1700;
+    LINE.stroke(Math.max(a, hd - band * .15), Math.min(b, hd + band), { color: '#fbe7b0', px: px * 1.15, alpha: Math.sin(Math.PI * k), z: c.z, under: .12, core: .8 });
+  });
   WORLD.screen.push((t) => {
     KT.show(T.lan, t, { x: 540, y: 470, t0: 1.00, in: 'rise', dist: 30, t1: 3.42, out: 'lift' });
     KT.show(T.kul, t, { x: 540, y: 612, t0: 1.68, in: 'mask', t1: 3.46, out: 'lift' });
@@ -151,7 +162,7 @@
     KT.show(T.qad, t, { x: 540, y: 500, t0: 3.40, in: 'rise', dist: 30, t1: 4.20, out: 'lift', outDur: .2 });
     KT.show(T.bid, t, { x: 540, y: 668, t0: 3.80, in: 'mask', t1: 4.98, out: 'lift', outDur: .18 });
     KT.show(T.lit, t, { x: 540, y: 420, t0: 4.44, in: 'rise', dist: 30, t1: 5.56, out: 'sink', outDist: 260, outDur: .26 });
-    KT.show(T.kab, t, { x: 540, y: 670, t0: 5.16, fade: 3, in: 'pop', spring: 'pop', from: .55, t1: 5.60, out: 'sink', outDist: 420, outDur: .28 });
+    KT.show(T.kab, t, { x: 540, y: 670, t0: 5.255, in: 'cut', t1: 5.60, out: 'sink', outDist: 420, outDur: .28 });
   });
   window.A_OPEN = { O, F, M, R, prints };
 })();

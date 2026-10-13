@@ -1,0 +1,19 @@
+{
+ "energy": "punchy",
+ "music": {
+  "file": "audio/music.wav",
+  "start_s": 0,
+  "loop": true,
+  "fade_out_s": 1.0
+ },
+ "voice": [
+  {
+   "file": "audio/vo.wav",
+   "start_s": 0
+  }
+ ],
+ "duck_db": 12,
+ "silence_ok": [],
+ "cues_extra": [],
+ "duration_s": 16.8
+}

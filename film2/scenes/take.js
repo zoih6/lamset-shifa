@@ -24,6 +24,9 @@ SHOTS.push({ a: 0, b: END_TAKE, tin: 'cut', draw: (t) => {
   g.restore();
   WORLD.over.forEach((f) => f(t));
   WORLD.screen.forEach((f) => f(t));
+  // hit flashes (a breath of light on the hero frames)
+  for (const t0 of (window.FLASH || [])) { const k = t - t0; if (k >= 0 && k < .25) { g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'screen'; g.fillStyle = `rgba(255,236,190,${.16 * Math.exp(-k * 14)})`; g.fillRect(0, 0, W, H); g.restore(); } }
 } });
+window.FLASH = [5.255, 10.525];
 // a small camera impact on hero landings
 const HITS = (t) => { const a = impact(t, 5.20, 10), b = impact(t, 10.36, 6); return { x: a.x + b.x, y: a.y + b.y, r: a.r + b.r }; };

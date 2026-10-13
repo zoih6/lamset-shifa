@@ -1,0 +1,135 @@
+{
+ "passed": true,
+ "results": [
+  {
+   "check": "offset",
+   "status": "pass",
+   "detail": "encoded audio vs mix.wav: worst 0 samples (0.00 ms), lags [0, 0, 0]"
+  },
+  {
+   "check": "loudness",
+   "status": "pass",
+   "detail": "integrated -14.08 LUFS, target -14"
+  },
+  {
+   "check": "true peak",
+   "status": "pass",
+   "detail": "-1.82 dBTP (limit -1.0)"
+  },
+  {
+   "check": "picture touch",
+   "status": "warn",
+   "detail": "appear at frame 1: change at frame 1 (0.45 vs local 0.90)"
+  },
+  {
+   "check": "picture kabir",
+   "status": "pass",
+   "detail": "appear at frame 158: change at frame 158 (26.60 vs local 1.90)"
+  },
+  {
+   "check": "picture fly1",
+   "status": "warn",
+   "detail": "move at frame 179: motion peak at frame 176"
+  },
+  {
+   "check": "picture star",
+   "status": "warn",
+   "detail": "appear at frame 259: change at frame 258 (1.83 vs local 1.96)"
+  },
+  {
+   "check": "picture seal",
+   "status": "pass",
+   "detail": "appear at frame 316: change at frame 316 (19.03 vs local 2.92)"
+  },
+  {
+   "check": "picture fly3",
+   "status": "pass",
+   "detail": "move at frame 421: motion peak at frame 423"
+  },
+  {
+   "check": "sync touch",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible touch",
+   "status": "pass",
+   "detail": "stands out by 2.3 dB in 4000-8000 Hz over music+voice"
+  },
+  {
+   "check": "sync kabir",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible kabir",
+   "status": "pass",
+   "detail": "stands out by 14.3 dB in 1000-2000 Hz over music+voice"
+  },
+  {
+   "check": "hero body kabir",
+   "status": "pass",
+   "detail": "main band 250-500 Hz lifted 3.6 dB (needs 3)"
+  },
+  {
+   "check": "sync fly1",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible fly1",
+   "status": "pass",
+   "detail": "stands out by 2.3 dB in 250-500 Hz over music+voice"
+  },
+  {
+   "check": "sync star",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible star",
+   "status": "pass",
+   "detail": "stands out by 2.0 dB in 8000-16000 Hz over music+voice"
+  },
+  {
+   "check": "sync seal",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible seal",
+   "status": "pass",
+   "detail": "stands out by 3.1 dB in 2000-4000 Hz over music+voice"
+  },
+  {
+   "check": "hero body seal",
+   "status": "pass",
+   "detail": "main band 2000-4000 Hz lifted 3.1 dB (needs 3)"
+  },
+  {
+   "check": "sync fly3",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible fly3",
+   "status": "pass",
+   "detail": "stands out by 2.4 dB in 500-1000 Hz over music+voice"
+  },
+  {
+   "check": "voice",
+   "status": "pass",
+   "detail": "music sits 16.8 LU under the voice (median while speaking)"
+  },
+  {
+   "check": "music",
+   "status": "pass",
+   "detail": "median -30.2 LUFS short-term; unplanned dips at []"
+  },
+  {
+   "check": "silence",
+   "status": "pass",
+   "detail": "none"
+  }
+ ]
+}
