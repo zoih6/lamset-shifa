@@ -4,7 +4,7 @@
 |---|---|---|
 | Sample S1–S3 + S4 start | 0–16.8 | ✅ approved by the client («رهييب اكمله») |
 | S4b قدراته · S5 services tree · S6 steps/family/growth · S7 journey · S8 contact + end card · S9 Wamd | 16.8–64.8 | ✅ 3 contact-sheet rounds → rendered in parts p2 (16.8–37.6) + p3 (37.6–64.8) |
-| Final mix + QA + release | 0–64.8 | see release v1.0 |
+| Final mix + QA + release | 0–64.8 | ✅ release v2.0 (v1.0 = the earlier «الخطوة الأولى» ad, untouched) |
 
 ## Rebuild after a sandbox reset
 ```bash
