@@ -1,11 +1,11 @@
 {
- "cues_file": "/var/tmp/ls/film/audio/cues_sample.json",
+ "cues_file": "/var/tmp/ls/film/audio/cues.json",
  "fps": 30,
- "duration_s": 16.8,
+ "duration_s": 64.8,
  "target_lufs": -14,
- "master_lufs": -14.06,
+ "master_lufs": -14.13,
  "master_true_peak_db": -2.0,
- "master_gain_db": 1.96,
+ "master_gain_db": 2.14,
  "events": [
   {
    "id": "step0",
@@ -18,7 +18,7 @@
    "cue_s": 0.1333,
    "peak_s": 0.1333,
    "pan": 0.1074074074074074,
-   "gain_db": -25.14,
+   "gain_db": -25.22,
    "limited_by": "best-band target",
    "band_hz": [
     1000,
@@ -41,7 +41,7 @@
    "cue_s": 0.5,
    "peak_s": 0.5,
    "pan": 0.15429636741265385,
-   "gain_db": -27.14,
+   "gain_db": -25.51,
    "limited_by": "best-band target",
    "band_hz": [
     2000,
@@ -64,7 +64,7 @@
    "cue_s": 0.8333,
    "peak_s": 0.8333,
    "pan": 0.08610086754506274,
-   "gain_db": -24.33,
+   "gain_db": -23.46,
    "limited_by": "best-band target",
    "band_hz": [
     1000,
@@ -87,7 +87,7 @@
    "cue_s": 1.2,
    "peak_s": 1.2,
    "pan": 0.0,
-   "gain_db": -29.92,
+   "gain_db": -30.69,
    "limited_by": "best-band target",
    "band_hz": [
     2000,
@@ -101,47 +101,24 @@
   },
   {
    "id": "arch-open",
-   "sound": "whoosh/fs-449988-whoosh-med-high-1",
+   "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
    "files": [
-    "audio/kit/whoosh/fs-449988-whoosh-med-high-1.wav"
+    "audio/kit/whoosh/fs-449992-whoosh-short-low-wav-1.wav"
    ],
    "weight": "support",
    "align": "peak",
    "cue_s": 1.5,
    "peak_s": 1.5,
    "pan": 0.0,
-   "gain_db": -13.53,
-   "limited_by": "best-band target",
-   "band_hz": [
-    4000,
-    8000
-   ],
-   "win_s": [
-    1.49,
-    1.65
-   ],
-   "visual": "move"
-  },
-  {
-   "id": "arch-fold",
-   "sound": "swish/fs-14176-28-wav-3",
-   "files": [
-    "audio/kit/swish/fs-14176-28-wav-3.wav"
-   ],
-   "weight": "support",
-   "align": "peak",
-   "cue_s": 5.0,
-   "peak_s": 5.0,
-   "pan": 0.0,
-   "gain_db": -23.38,
+   "gain_db": 3.37,
    "limited_by": "best-band target",
    "band_hz": [
     500,
     1000
    ],
    "win_s": [
-    4.99,
-    5.1252
+    1.49,
+    1.6202
    ],
    "visual": "move"
   },
@@ -157,7 +134,7 @@
    "cue_s": 5.6333,
    "peak_s": 5.6333,
    "pan": 0.0,
-   "gain_db": -18.19,
+   "gain_db": -8.0,
    "limited_by": "main-band target (hero)",
    "band_hz": [
     250,
@@ -180,7 +157,7 @@
    "cue_s": 6.0333,
    "peak_s": 6.0333,
    "pan": 0.0,
-   "gain_db": -18.71,
+   "gain_db": -19.4,
    "limited_by": "best-band target",
    "band_hz": [
     250,
@@ -203,7 +180,7 @@
    "cue_s": 8.6667,
    "peak_s": 8.6667,
    "pan": 0.0,
-   "gain_db": -27.51,
+   "gain_db": -26.55,
    "limited_by": "best-band target",
    "band_hz": [
     8000,
@@ -240,29 +217,6 @@
    "visual": "appear"
   },
   {
-   "id": "wordmark",
-   "sound": "swish/fs-14176-28-wav-3",
-   "files": [
-    "audio/kit/swish/fs-14176-28-wav-3.wav"
-   ],
-   "weight": "support",
-   "align": "peak",
-   "cue_s": 10.0,
-   "peak_s": 10.0,
-   "pan": 0.0,
-   "gain_db": -27.38,
-   "limited_by": "best-band target",
-   "band_hz": [
-    500,
-    1000
-   ],
-   "win_s": [
-    9.99,
-    10.1251
-   ],
-   "visual": "move"
-  },
-  {
    "id": "pill1",
    "sound": "pop/fs-253956-bubble-pop-1",
    "files": [
@@ -273,7 +227,7 @@
    "cue_s": 11.3667,
    "peak_s": 11.3667,
    "pan": 0.0,
-   "gain_db": -28.71,
+   "gain_db": -28.94,
    "limited_by": "best-band target",
    "band_hz": [
     4000,
@@ -286,29 +240,6 @@
    "visual": "appear"
   },
   {
-   "id": "logo-out",
-   "sound": "swish/fs-14176-28-wav-3",
-   "files": [
-    "audio/kit/swish/fs-14176-28-wav-3.wav"
-   ],
-   "weight": "support",
-   "align": "peak",
-   "cue_s": 14.0,
-   "peak_s": 14.0,
-   "pan": 0.0,
-   "gain_db": -25.38,
-   "limited_by": "best-band target",
-   "band_hz": [
-    500,
-    1000
-   ],
-   "win_s": [
-    13.99,
-    14.1284
-   ],
-   "visual": "move"
-  },
-  {
    "id": "seed",
    "sound": "pop/fs-253956-bubble-pop-1",
    "files": [
@@ -319,7 +250,7 @@
    "cue_s": 14.3333,
    "peak_s": 14.3333,
    "pan": 0.0,
-   "gain_db": -31.92,
+   "gain_db": -32.94,
    "limited_by": "best-band target",
    "band_hz": [
     2000,
@@ -328,6 +259,400 @@
    "win_s": [
     14.3233,
     14.3769
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "discover",
+   "sound": "shimmer",
+   "files": [
+    "audio/kit/shimmer/fs-376745-fantasy-ui-button-3-wav-2.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 19.6667,
+   "peak_s": 19.6667,
+   "pan": 0.0,
+   "gain_db": -27.12,
+   "limited_by": "best-band target",
+   "band_hz": [
+    8000,
+    16000
+   ],
+   "win_s": [
+    19.6567,
+    19.8167
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "svc0",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "files": [
+    "audio/kit/pop/fs-253956-bubble-pop-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 24.1333,
+   "peak_s": 24.1333,
+   "pan": 0.3,
+   "gain_db": -28.94,
+   "limited_by": "best-band target",
+   "band_hz": [
+    4000,
+    8000
+   ],
+   "win_s": [
+    24.1233,
+    24.1773
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "svc2",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "files": [
+    "audio/kit/pop/fs-253956-bubble-pop-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 26.4333,
+   "peak_s": 26.4333,
+   "pan": 0.3,
+   "gain_db": -32.26,
+   "limited_by": "best-band target",
+   "band_hz": [
+    2000,
+    4000
+   ],
+   "win_s": [
+    26.4233,
+    26.4761
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "svc6",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "files": [
+    "audio/kit/pop/fs-253956-bubble-pop-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 32.1333,
+   "peak_s": 32.1333,
+   "pan": 0.3,
+   "gain_db": -31.19,
+   "limited_by": "best-band target",
+   "band_hz": [
+    2000,
+    4000
+   ],
+   "win_s": [
+    32.1233,
+    32.1769
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "tree",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "files": [
+    "audio/kit/thump/fs-133282-thump-on-carpet-2.wav",
+    "audio/kit/tap/kenney-impact-impact-plate-heavy-003.wav"
+   ],
+   "weight": "hero",
+   "align": "peak",
+   "cue_s": 36.9,
+   "peak_s": 36.9,
+   "pan": 0.0,
+   "gain_db": -4.74,
+   "limited_by": "main-band target (hero)",
+   "band_hz": [
+    250,
+    500
+   ],
+   "win_s": [
+    36.89,
+    36.9977
+   ],
+   "visual": "land"
+  },
+  {
+   "id": "tree-out",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "files": [
+    "audio/kit/whoosh/fs-449994-whoosh-med-mid-wav-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 37.4333,
+   "peak_s": 37.4333,
+   "pan": 0.0,
+   "gain_db": -21.28,
+   "limited_by": "best-band target",
+   "band_hz": [
+    500,
+    1000
+   ],
+   "win_s": [
+    37.4233,
+    37.5833
+   ],
+   "visual": "move"
+  },
+  {
+   "id": "step-a",
+   "sound": "tap",
+   "files": [
+    "audio/kit/tap/kenney-impact-impact-metal-heavy-003.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 38.2,
+   "peak_s": 38.2,
+   "pan": 0.0,
+   "gain_db": -21.82,
+   "limited_by": "best-band target",
+   "band_hz": [
+    1000,
+    2000
+   ],
+   "win_s": [
+    38.19,
+    38.2519
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "step-c",
+   "sound": "tap",
+   "files": [
+    "audio/kit/tap/kenney-impact-impact-metal-light-000.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 38.8333,
+   "peak_s": 38.8333,
+   "pan": 0.0,
+   "gain_db": -23.51,
+   "limited_by": "best-band target",
+   "band_hz": [
+    4000,
+    8000
+   ],
+   "win_s": [
+    38.8233,
+    38.9242
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "family",
+   "sound": "whoosh/fs-449988-whoosh-med-high-1",
+   "files": [
+    "audio/kit/whoosh/fs-449988-whoosh-med-high-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 40.8,
+   "peak_s": 40.8,
+   "pan": 0.0,
+   "gain_db": -30.37,
+   "limited_by": "best-band target",
+   "band_hz": [
+    1000,
+    2000
+   ],
+   "win_s": [
+    40.79,
+    40.95
+   ],
+   "visual": "move"
+  },
+  {
+   "id": "family-out",
+   "sound": "swish/fs-14176-28-wav-3",
+   "files": [
+    "audio/kit/swish/fs-14176-28-wav-3.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 42.7,
+   "peak_s": 42.7,
+   "pan": 0.0,
+   "gain_db": -34.99,
+   "limited_by": "best-band target",
+   "band_hz": [
+    4000,
+    8000
+   ],
+   "win_s": [
+    42.69,
+    42.8274
+   ],
+   "visual": "move"
+  },
+  {
+   "id": "iris3",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "files": [
+    "audio/kit/whoosh/fs-449994-whoosh-med-mid-wav-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 46.5667,
+   "peak_s": 46.5667,
+   "pan": 0.0,
+   "gain_db": -21.0,
+   "limited_by": "2-8 kHz cap",
+   "band_hz": [
+    250,
+    500
+   ],
+   "win_s": [
+    46.5567,
+    46.7167
+   ],
+   "visual": "move"
+  },
+  {
+   "id": "rihla",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "files": [
+    "audio/kit/thump/fs-133282-thump-on-carpet-2.wav",
+    "audio/kit/tap/kenney-impact-impact-plate-heavy-003.wav"
+   ],
+   "weight": "hero",
+   "align": "peak",
+   "cue_s": 50.6333,
+   "peak_s": 50.6333,
+   "pan": 0.0,
+   "gain_db": -4.66,
+   "limited_by": "main-band target (hero)",
+   "band_hz": [
+    250,
+    500
+   ],
+   "win_s": [
+    50.6233,
+    50.7338
+   ],
+   "visual": "land"
+  },
+  {
+   "id": "to-logo",
+   "sound": "swish/fs-14176-28-wav-3",
+   "files": [
+    "audio/kit/swish/fs-14176-28-wav-3.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 59.6,
+   "peak_s": 59.6,
+   "pan": 0.0,
+   "gain_db": -34.99,
+   "limited_by": "best-band target",
+   "band_hz": [
+    4000,
+    8000
+   ],
+   "win_s": [
+    59.59,
+    59.7271
+   ],
+   "visual": "move"
+  },
+  {
+   "id": "logo-end",
+   "sound": "chime",
+   "files": [
+    "audio/kit/chime/fs-404104-glass-ding-3.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 59.8333,
+   "peak_s": 59.8333,
+   "pan": 0.0,
+   "gain_db": -30.55,
+   "limited_by": "best-band target",
+   "band_hz": [
+    4000,
+    8000
+   ],
+   "win_s": [
+    59.8233,
+    59.9833
+   ],
+   "visual": "appear"
+  },
+  {
+   "id": "ribbon",
+   "sound": "whoosh/fs-449988-whoosh-med-high-1",
+   "files": [
+    "audio/kit/whoosh/fs-449988-whoosh-med-high-1.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 61.6333,
+   "peak_s": 61.6333,
+   "pan": 0.0,
+   "gain_db": -26.37,
+   "limited_by": "best-band target",
+   "band_hz": [
+    2000,
+    4000
+   ],
+   "win_s": [
+    61.6233,
+    61.7833
+   ],
+   "visual": "move"
+  },
+  {
+   "id": "wamd",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "files": [
+    "audio/kit/thump/fs-133282-thump-on-carpet-2.wav",
+    "audio/kit/tap/kenney-impact-impact-metal-heavy-003.wav"
+   ],
+   "weight": "hero",
+   "align": "peak",
+   "cue_s": 62.2333,
+   "peak_s": 62.2333,
+   "pan": 0.0,
+   "gain_db": -7.27,
+   "limited_by": "main-band target (hero)",
+   "band_hz": [
+    250,
+    500
+   ],
+   "win_s": [
+    62.2233,
+    62.2865
+   ],
+   "visual": "land"
+  },
+  {
+   "id": "shine",
+   "sound": "shimmer",
+   "files": [
+    "audio/kit/shimmer/fs-389789-chimes-3.wav"
+   ],
+   "weight": "support",
+   "align": "peak",
+   "cue_s": 62.7333,
+   "peak_s": 62.7333,
+   "pan": 0.0,
+   "gain_db": -31.12,
+   "limited_by": "best-band target",
+   "band_hz": [
+    1000,
+    2000
+   ],
+   "win_s": [
+    62.7233,
+    62.8833
    ],
    "visual": "appear"
   }

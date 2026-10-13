@@ -32,15 +32,12 @@
   // ── sound cues (same t0 / springs as the picture) ──
   [0, 2, 4].forEach((i) => cue.appear('step' + i, STEP_T[i], { sound: 'tap', pan: (steps[i].x / 540 - 1) }));
   cue.appear('dot', 1.18, { sound: 'pop/fs-253956-bubble-pop-1' });
-  cue.move('arch-open', when.spring(1.40, 'card'), { sound: 'whoosh/fs-449988-whoosh-med-high-1' });
-  cue.move('arch-fold', when.spring(4.92, 'snap'), { sound: 'swish/fs-14176-28-wav-3' });
+  cue.move('arch-open', when.spring(1.40, 'card'), { sound: 'whoosh/fs-449992-whoosh-short-low-wav-1' });
   cue.hero('kabir', when.spring(5.18, POP), { on: 'land', sound: 'thump/fs-133282-thump-on-carpet-2+tap' });
   cue.move('iris-open', when.ease(5.72, 6.32), { sound: 'whoosh/fs-449994-whoosh-med-mid-wav-1' });
   cue.appear('afdal', 8.64, { sound: 'chime' });
   cue.hero('emblem', when.spring(9.40, POP), { on: 'appear', sound: 'thump/fs-187136-body-fall-wav-1+tap' });
-  cue.move('wordmark', when.ease(9.95, 10.85, easeOut), { sound: 'swish/fs-14176-28-wav-3' });
   cue.appear('pill1', 11.36, { sound: 'pop/fs-253956-bubble-pop-1' });
-  cue.move('logo-out', when.ease(13.8, 14.15, ease), { sound: 'swish/fs-14176-28-wav-3' });
 
   const archPerim = (w, h) => 2 * (w + h) - (4 - Math.PI) * w / 2;
 

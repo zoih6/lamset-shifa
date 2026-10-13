@@ -45,5 +45,30 @@ const BRAND = (() => {
     g.restore(); return { w: ww, h: hh };
   }
   const img = (k) => A[k];
-  return { stage, post, leaf, leafPath, archPath, cover, softShadow, pill, img };
+  // words on one RTL line: returns per-word {x, sc}; auto-shrinks to maxW
+  function row(ws, cx, { gap = 34, maxW = 940 } = {}) {
+    const tot = ws.reduce((a, w) => a + w.w, 0) + gap * (ws.length - 1), sc = Math.min(1, maxW / tot); let x = cx + tot * sc / 2;
+    return ws.map((w) => { const c = x - w.w * sc / 2; x -= (w.w + gap) * sc; return { x: c, sc }; });
+  }
+  // left-to-right text (digits / phone numbers) pre-rendered like KT.word
+  function ltr(text, { size = 80, font = DISPLAY, weight = 800, color = '#fff' } = {}) {
+    const m = mk(8, 8).getContext('2d'); m.font = `${weight} ${size}px ${font}`; m.direction = 'ltr';
+    const w = Math.ceil(m.measureText(text).width), pad = Math.ceil(size * .45) + 24, h = Math.ceil(size * 1.5), c = mk(w + pad * 2, h + pad * 2), x = c.getContext('2d');
+    x.font = m.font; x.direction = 'ltr'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.fillStyle = color; x.fillText(text, c.width / 2, c.height / 2);
+    return { img: c, text, w, h, pad, size, style: { font } };
+  }
+  // generic iris: gold disc leads, photo follows (brand transition)
+  function iris(t, a, b, x0, y0, x1, y1, r0, r1, drawIn, { lag = .1, rim = BR.gold } = {}) {
+    const kg = ease(a, b, t), kp = ease(a + lag, b + lag, t), x = lerp(x0, x1, kg), y = lerp(y0, y1, kg), rg = lerp(r0, r1, kg), rp = lerp(0, r1, kp);
+    if (kg <= 0) return; g.save(); g.fillStyle = rim; g.beginPath(); g.arc(x, y, rg, 0, 7); g.fill(); g.restore();
+    if (rp > 1) { g.save(); g.beginPath(); g.arc(x, y, rp, 0, 7); g.clip(); drawIn(); g.restore(); }
+  }
+  // white round badge with a Lucide icon drawing on
+  function badge(name, x, y, r, k, kIcon, { fill = '#fff', ring = BR.mint, color = BR.deep, alpha = 1 } = {}) {
+    if (k <= .002) return; g.save(); g.translate(x, y); g.scale(k, k); g.globalAlpha *= alpha;
+    softShadow(() => { g.beginPath(); g.arc(0, 0, r, 0, 7); g.fillStyle = fill; g.fill(); }, { blur: 30, dy: 14, a: .2 });
+    if (ring) { g.beginPath(); g.arc(0, 0, r - 7, 0, 7); g.strokeStyle = ring; g.lineWidth = 4; g.stroke(); }
+    icon(name, 0, 0, r * 1.05, { color, lw: 2.1, k: kIcon }); g.restore();
+  }
+  return { stage, post, leaf, leafPath, archPath, cover, softShadow, pill, img, row, ltr, iris, badge };
 })();

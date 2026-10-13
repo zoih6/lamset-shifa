@@ -2,8 +2,9 @@
 
 | Part | t (s) | Status |
 |---|---|---|
-| Sample S1–S3 + S4 start | 0–16.8 | ✅ rendered, sound QA PASS (−14.07 LUFS, TP −1.95), awaiting approval |
-| S4 rest → S9 Wamd outro | 16.8–64.5 | ⏳ after approval |
+| Sample S1–S3 + S4 start | 0–16.8 | ✅ approved by the client («رهييب اكمله») |
+| S4b قدراته · S5 services tree · S6 steps/family/growth · S7 journey · S8 contact + end card · S9 Wamd | 16.8–64.8 | ✅ 3 contact-sheet rounds → rendered in parts p2 (16.8–37.6) + p3 (37.6–64.8) |
+| Final mix + QA + release | 0–64.8 | see release v1.0 |
 
 ## Rebuild after a sandbox reset
 ```bash
