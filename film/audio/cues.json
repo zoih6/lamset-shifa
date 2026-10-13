@@ -1,0 +1,129 @@
+{
+ "fps": 30,
+ "duration_s": 21,
+ "energy": "punchy",
+ "kit": "audio/kit",
+ "music": {
+  "file": "audio/music.wav",
+  "start_s": 0,
+  "loop": true,
+  "fade_out_s": 1.5
+ },
+ "voice": [
+  {
+   "file": "audio/vo.wav",
+   "start_s": 0
+  }
+ ],
+ "duck_db": 12,
+ "silence_ok": [],
+ "cues": [
+  {
+   "id": "step0",
+   "frame": 4,
+   "visual": "appear",
+   "sound": "tap",
+   "pan": 0.1074074074074074,
+   "src": "appear @0.1s"
+  },
+  {
+   "id": "step2",
+   "frame": 15,
+   "visual": "appear",
+   "sound": "tap",
+   "pan": 0.15429636741265385,
+   "src": "appear @0.47s"
+  },
+  {
+   "id": "step4",
+   "frame": 25,
+   "visual": "appear",
+   "sound": "tap",
+   "pan": 0.08610086754506274,
+   "src": "appear @0.8s"
+  },
+  {
+   "id": "dot",
+   "frame": 36,
+   "visual": "appear",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "src": "appear @1.18s"
+  },
+  {
+   "id": "arch-open",
+   "frame": 45,
+   "visual": "move",
+   "sound": "whoosh/fs-449988-whoosh-med-high-1",
+   "src": "spring card @1.4s → peak"
+  },
+  {
+   "id": "arch-fold",
+   "frame": 150,
+   "visual": "move",
+   "sound": "swish/fs-14176-28-wav-3",
+   "src": "spring snap @4.92s → peak"
+  },
+  {
+   "id": "kabir",
+   "frame": 169,
+   "visual": "land",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring 260/15 @5.18s → land"
+  },
+  {
+   "id": "iris-open",
+   "frame": 181,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "ease 5.72–6.32s → peak"
+  },
+  {
+   "id": "afdal",
+   "frame": 260,
+   "visual": "appear",
+   "sound": "chime",
+   "src": "appear @8.64s"
+  },
+  {
+   "id": "emblem",
+   "frame": 283,
+   "visual": "appear",
+   "sound": "thump/fs-187136-body-fall-wav-1+tap",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "spring 260/15 @9.4s → start"
+  },
+  {
+   "id": "wordmark",
+   "frame": 300,
+   "visual": "move",
+   "sound": "swish/fs-14176-28-wav-3",
+   "src": "easeOut 9.95–10.85s → peak"
+  },
+  {
+   "id": "pill1",
+   "frame": 341,
+   "visual": "appear",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "src": "appear @11.36s"
+  },
+  {
+   "id": "logo-out",
+   "frame": 420,
+   "visual": "move",
+   "sound": "swish/fs-14176-28-wav-3",
+   "src": "ease 13.8–14.15s → peak"
+  },
+  {
+   "id": "seed",
+   "frame": 430,
+   "visual": "appear",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "src": "appear @14.3s"
+  }
+ ]
+}

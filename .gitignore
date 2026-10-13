@@ -1,7 +1,28 @@
+# SOUND LAYER (rebuilt by tools/sound_layer.sh; never commit)
 # تجاهل مجلدات الرندر المؤقتة
-film/tmp/
-tmp/
-node_modules/
-film/out/
-out/
+**/audio/_raw/
+**/audio/candidates/
+**/audio/kit/
+**/audio/stems/
+**/tmp/
 *.log
+*.part.mp4
+.ghtok
+__pycache__/
+dl/
+engine/audio/
+engine/video.mp4
+film/out/
+film/tmp/
+node_modules
+node_modules/
+out/
+renders/
+segments/
+sound-layer/
+tmp/
+
+# derived audio (rebuild: see docs/PROGRESS.md)
+film/audio/*.wav
+film/audio/browse.png
+film/audio/cues_sample.json
