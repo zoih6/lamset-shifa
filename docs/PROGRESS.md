@@ -28,9 +28,17 @@ Rebuild the sound inputs (ignored files), from `film2/`:
 | Part | Span (s) | Status |
 |---|---|---|
 | A: touch, footsteps, «نحن هنا», stairs/star, seal, fingerprint | 0–16.8 | ✅ sample rendered (`--sub 6`), sound QA PASS → pre-release `v2-sample` |
-| B: discover/grow, 8 services | 16.8–37.3 | ⏳ after sample approval |
-| C: steps / heart / family / growth / day, journey pull-back, contact, end card | 37.3–61.3 | ⏳ |
-| D: Wamd outro | 61.3–64.8 | ⏳ |
+| B: seed sprouts, 7 service stations, spectrum infinity | 16.84–37.30 | ✅ |
+| C: steps / heart&home / growth / new day / REVEAL «بل رحلة» | 37.30–52.56 | ✅ |
+| D: address pin, end card + numbers | 52.56–61.30 | ✅ |
+| E: Wamd studio outro (arcs + badge spring + shimmer) | 61.37–64.80 | ✅ |
+
+## v3.0 «الخط الواحد» — FULL (2026-10-13)
+- Render: parts p1..p4 (0–16.8 | 16.8–37.6 | 37.6–61.4 | 61.4–64.8), `--sub 6`, → 1944 fr.
+- Sound: `export_cues --config audio/sound.json` → mix → qa **0 FAIL / 12 warn** (−14.15 LUFS, TP −1.75), release encodes re-check PASS.
+- Sound lessons that mattered: heroes placed ON stressed VO words get crushed by the mix target — partner them with a bright chime (band moves 4–8 k) or they fail the 3 dB body gate; one cue sat at 2.9 dB after 4 rounds → demoted to support (documented), picture still carries the moment (FLASH + spectrum fill).
+- encode_release.sh is now orientation-aware (a 9:16 reel was being squished to 1920×1080 and still passing QA — always ffprobe deliverables). v2.0 release assets were re-uploaded at the correct orientation from the master.
+
 
 **Lessons (v2):**
 - qa.py `appear` needs a change ≥ 3× the local motion. In a one-take world the camera is always moving, so hero beats need a hard single-frame event (a `cut` word plus a 1-frame light flash). Find the true frame by frame-diffing the render, then put the cue there.

@@ -1,0 +1,180 @@
+{
+ "fps": 30,
+ "duration_s": 64.8,
+ "energy": "punchy",
+ "kit": "audio/kit",
+ "music": {
+  "file": "audio/music.wav",
+  "start_s": 0,
+  "loop": true,
+  "fade_out_s": 1.5
+ },
+ "voice": [
+  {
+   "file": "audio/vo.wav",
+   "start_s": 0
+  }
+ ],
+ "duck_db": 12,
+ "silence_ok": [],
+ "cues": [
+  {
+   "id": "touch",
+   "frame": 1,
+   "visual": "appear",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "src": "appear @0.02s"
+  },
+  {
+   "id": "kabir",
+   "frame": 158,
+   "visual": "appear",
+   "sound": "thump/fs-133282-thump-on-carpet-2+chime/fs-185822-single-chime-1",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "t 5.267s"
+  },
+  {
+   "id": "fly1",
+   "frame": 179,
+   "visual": "move",
+   "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
+   "src": "ease 5.62–6.3s → peak"
+  },
+  {
+   "id": "star",
+   "frame": 259,
+   "visual": "appear",
+   "sound": "chime/fs-185822-single-chime-1",
+   "src": "appear @8.62s"
+  },
+  {
+   "id": "seal",
+   "frame": 316,
+   "visual": "appear",
+   "sound": "thump/fs-187136-body-fall-wav-1+tap/fs-369710-wood-knock+chime/fs-185822-single-chime-1",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "t 10.533s"
+  },
+  {
+   "id": "fly3",
+   "frame": 421,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "ease 13.5–14.55s → peak"
+  },
+  {
+   "id": "flyB",
+   "frame": 658,
+   "visual": "move",
+   "sound": "whoosh/fs-60002-swoosh-15-windy-1",
+   "src": "ease 21–22.8s → peak"
+  },
+  {
+   "id": "svc0",
+   "frame": 715,
+   "visual": "appear",
+   "sound": "pop/fs-392624-champagne-cork-1",
+   "pan": -0.3,
+   "src": "appear @23.819999999999997s"
+  },
+  {
+   "id": "svc2",
+   "frame": 784,
+   "visual": "appear",
+   "sound": "tap/fs-339364-drop06-wav",
+   "pan": -0.3,
+   "src": "appear @26.119999999999997s"
+  },
+  {
+   "id": "svc6",
+   "frame": 955,
+   "visual": "appear",
+   "sound": "tap/fs-339364-drop06-wav",
+   "pan": -0.3,
+   "src": "appear @31.8s"
+  },
+  {
+   "id": "tawahhud",
+   "frame": 1096,
+   "visual": "appear",
+   "sound": "thump/fs-133282-thump-on-carpet-2+chime/fs-127149-ding-wav-1",
+   "src": "appear @36.52s"
+  },
+  {
+   "id": "heart",
+   "frame": 1202,
+   "visual": "appear",
+   "sound": "chime/fs-185822-single-chime-1",
+   "src": "appear @40.04s"
+  },
+  {
+   "id": "reveal",
+   "frame": 1411,
+   "visual": "move",
+   "sound": "whoosh/fs-60002-swoosh-15-windy-1",
+   "src": "ease 46.3–47.7s → peak"
+  },
+  {
+   "id": "rihla",
+   "frame": 1506,
+   "visual": "appear",
+   "sound": "thump/fs-133282-thump-on-carpet-2+tap/fs-369710-wood-knock",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "t 50.2s"
+  },
+  {
+   "id": "dive",
+   "frame": 1577,
+   "visual": "move",
+   "sound": "whoosh/fs-449992-whoosh-short-low-wav-1",
+   "src": "ease 52.05–53.05s → peak"
+  },
+  {
+   "id": "pin",
+   "frame": 1606,
+   "visual": "appear",
+   "sound": "pop/fs-253956-bubble-pop-1",
+   "src": "appear @53.5s"
+  },
+  {
+   "id": "endcard",
+   "frame": 1719,
+   "visual": "appear",
+   "sound": "thump/fs-187136-body-fall-wav-1+chime/fs-185822-single-chime-1",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "t 57.3s"
+  },
+  {
+   "id": "wos",
+   "frame": 1845,
+   "visual": "move",
+   "sound": "whoosh/fs-449994-whoosh-med-mid-wav-1",
+   "src": "ease 61.366–61.586s → peak"
+  },
+  {
+   "id": "wamd",
+   "frame": 1860,
+   "visual": "appear",
+   "sound": "thump/fs-187136-body-fall-wav-1+chime/fs-185822-single-chime-1",
+   "weight": "hero",
+   "stop_before": true,
+   "build": true,
+   "src": "t 62s"
+  },
+  {
+   "id": "wmsh",
+   "frame": 1886,
+   "visual": "appear",
+   "sound": "shimmer/fs-388295-sparkles-and-percussion-1",
+   "src": "appear @62.85s"
+  }
+ ]
+}

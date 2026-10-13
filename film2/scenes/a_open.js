@@ -109,10 +109,10 @@
 
   // ── sound ──
   cue.appear('touch', .02, { sound: 'pop/fs-253956-bubble-pop-1' });
-  cue.hero('kabir', 5.267, { on: 'appear', sound: 'thump/fs-133282-thump-on-carpet-2+tap' });
+  cue.hero('kabir', 5.267, { on: 'appear', sound: 'thump/fs-133282-thump-on-carpet-2+chime/fs-185822-single-chime-1' });
   cue.move('fly1', when.ease(5.62, 6.30), { sound: 'whoosh/fs-449992-whoosh-short-low-wav-1' });
-  cue.appear('star', 8.62, { sound: 'chime' });
-  cue.hero('seal', 10.533, { on: 'appear', sound: 'thump/fs-187136-body-fall-wav-1+tap' });
+  cue.appear('star', 8.62, { sound: 'chime/fs-185822-single-chime-1' });
+  cue.hero('seal', 10.533, { on: 'appear', sound: 'thump/fs-187136-body-fall-wav-1+tap/fs-369710-wood-knock+chime/fs-185822-single-chime-1' });
   cue.move('fly3', when.ease(13.50, 14.55), { sound: 'whoosh/fs-449994-whoosh-med-mid-wav-1' });
 
   // ── world layers ───────────────────────────────────────────────────────────────────────────────────

@@ -27,6 +27,7 @@ SHOTS.push({ a: 0, b: END_TAKE, tin: 'cut', draw: (t) => {
   // hit flashes (a breath of light on the hero frames)
   for (const t0 of (window.FLASH || [])) { const k = t - t0; if (k >= 0 && k < .25) { g.save(); g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'screen'; g.fillStyle = `rgba(255,236,190,${.16 * Math.exp(-k * 14)})`; g.fillRect(0, 0, W, H); g.restore(); } }
 } });
-window.FLASH = [5.255, 10.525];
+window.FLASH = (window.FLASH || []).concat([5.255, 10.525]);
 // a small camera impact on hero landings
-const HITS = (t) => { const a = impact(t, 5.20, 10), b = impact(t, 10.36, 6); return { x: a.x + b.x, y: a.y + b.y, r: a.r + b.r }; };
+const HITS = (t) => { const hs = [[5.20, 10], [10.36, 6], [36.48, 6], [50.14, 8], [57.24, 7], [61.94, 9]]; let x = 0, y = 0, r = 0;
+  for (const [t0, a] of hs) { const im = impact(t, t0, a); x += im.x; y += im.y; r += im.r; } return { x, y, r }; };

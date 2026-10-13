@@ -9,12 +9,12 @@
   {
    "check": "loudness",
    "status": "pass",
-   "detail": "integrated -14.08 LUFS, target -14"
+   "detail": "integrated -14.15 LUFS, target -14"
   },
   {
    "check": "true peak",
    "status": "pass",
-   "detail": "-1.82 dBTP (limit -1.0)"
+   "detail": "-1.75 dBTP (limit -1.0)"
   },
   {
    "check": "picture touch",
@@ -47,6 +47,76 @@
    "detail": "move at frame 421: motion peak at frame 423"
   },
   {
+   "check": "picture flyB",
+   "status": "pass",
+   "detail": "move at frame 658: motion peak at frame 655"
+  },
+  {
+   "check": "picture svc0",
+   "status": "warn",
+   "detail": "appear at frame 715: change at frame 716 (1.47 vs local 1.40)"
+  },
+  {
+   "check": "picture svc2",
+   "status": "warn",
+   "detail": "appear at frame 784: change at frame 783 (2.20 vs local 2.08)"
+  },
+  {
+   "check": "picture svc6",
+   "status": "warn",
+   "detail": "appear at frame 955: change at frame 955 (1.92 vs local 1.95)"
+  },
+  {
+   "check": "picture tawahhud",
+   "status": "pass",
+   "detail": "appear at frame 1096: change at frame 1096 (19.44 vs local 1.97)"
+  },
+  {
+   "check": "picture heart",
+   "status": "warn",
+   "detail": "appear at frame 1202: change at frame 1203 (1.74 vs local 1.41)"
+  },
+  {
+   "check": "picture reveal",
+   "status": "warn",
+   "detail": "move at frame 1411: motion peak at frame 1408"
+  },
+  {
+   "check": "picture rihla",
+   "status": "pass",
+   "detail": "appear at frame 1506: change at frame 1506 (23.21 vs local 0.54)"
+  },
+  {
+   "check": "picture dive",
+   "status": "warn",
+   "detail": "move at frame 1577: motion peak at frame 1580"
+  },
+  {
+   "check": "picture pin",
+   "status": "warn",
+   "detail": "appear at frame 1606: change at frame 1606 (0.92 vs local 0.43)"
+  },
+  {
+   "check": "picture endcard",
+   "status": "pass",
+   "detail": "appear at frame 1719: change at frame 1719 (21.51 vs local 1.82)"
+  },
+  {
+   "check": "picture wos",
+   "status": "warn",
+   "detail": "move at frame 1845: motion peak at frame 1842"
+  },
+  {
+   "check": "picture wamd",
+   "status": "pass",
+   "detail": "appear at frame 1860: change at frame 1860 (25.91 vs local 0.78)"
+  },
+  {
+   "check": "picture wmsh",
+   "status": "warn",
+   "detail": "appear at frame 1886: change at frame 1885 (0.39 vs local 0.31)"
+  },
+  {
    "check": "sync touch",
    "status": "pass",
    "detail": "peak 0.00 frames from its cue"
@@ -54,7 +124,7 @@
   {
    "check": "audible touch",
    "status": "pass",
-   "detail": "stands out by 2.3 dB in 4000-8000 Hz over music+voice"
+   "detail": "stands out by 1.8 dB in 4000-8000 Hz over music+voice"
   },
   {
    "check": "sync kabir",
@@ -64,12 +134,12 @@
   {
    "check": "audible kabir",
    "status": "pass",
-   "detail": "stands out by 14.3 dB in 1000-2000 Hz over music+voice"
+   "detail": "stands out by 3.6 dB in 4000-8000 Hz over music+voice"
   },
   {
    "check": "hero body kabir",
    "status": "pass",
-   "detail": "main band 250-500 Hz lifted 3.6 dB (needs 3)"
+   "detail": "main band 4000-8000 Hz lifted 3.6 dB (needs 3)"
   },
   {
    "check": "sync fly1",
@@ -79,7 +149,7 @@
   {
    "check": "audible fly1",
    "status": "pass",
-   "detail": "stands out by 2.3 dB in 250-500 Hz over music+voice"
+   "detail": "stands out by 2.2 dB in 125-250 Hz over music+voice"
   },
   {
    "check": "sync star",
@@ -89,7 +159,7 @@
   {
    "check": "audible star",
    "status": "pass",
-   "detail": "stands out by 2.0 dB in 8000-16000 Hz over music+voice"
+   "detail": "stands out by 1.6 dB in 4000-8000 Hz over music+voice"
   },
   {
    "check": "sync seal",
@@ -99,12 +169,12 @@
   {
    "check": "audible seal",
    "status": "pass",
-   "detail": "stands out by 3.1 dB in 2000-4000 Hz over music+voice"
+   "detail": "stands out by 3.0 dB in 4000-8000 Hz over music+voice"
   },
   {
    "check": "hero body seal",
    "status": "pass",
-   "detail": "main band 2000-4000 Hz lifted 3.1 dB (needs 3)"
+   "detail": "main band 4000-8000 Hz lifted 3.0 dB (needs 3)"
   },
   {
    "check": "sync fly3",
@@ -117,14 +187,169 @@
    "detail": "stands out by 2.4 dB in 500-1000 Hz over music+voice"
   },
   {
+   "check": "sync flyB",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible flyB",
+   "status": "pass",
+   "detail": "stands out by 2.0 dB in 250-500 Hz over music+voice"
+  },
+  {
+   "check": "sync svc0",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible svc0",
+   "status": "pass",
+   "detail": "stands out by 2.2 dB in 500-1000 Hz over music+voice"
+  },
+  {
+   "check": "sync svc2",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible svc2",
+   "status": "pass",
+   "detail": "stands out by 1.7 dB in 250-500 Hz over music+voice"
+  },
+  {
+   "check": "sync svc6",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible svc6",
+   "status": "pass",
+   "detail": "stands out by 4.6 dB in 500-1000 Hz over music+voice"
+  },
+  {
+   "check": "sync tawahhud",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible tawahhud",
+   "status": "pass",
+   "detail": "stands out by 2.0 dB in 1000-2000 Hz over music+voice"
+  },
+  {
+   "check": "sync heart",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible heart",
+   "status": "pass",
+   "detail": "stands out by 3.4 dB in 4000-8000 Hz over music+voice"
+  },
+  {
+   "check": "sync reveal",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible reveal",
+   "status": "pass",
+   "detail": "stands out by 3.2 dB in 500-1000 Hz over music+voice"
+  },
+  {
+   "check": "sync rihla",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible rihla",
+   "status": "pass",
+   "detail": "stands out by 3.2 dB in 250-500 Hz over music+voice"
+  },
+  {
+   "check": "hero body rihla",
+   "status": "pass",
+   "detail": "main band 250-500 Hz lifted 3.2 dB (needs 3)"
+  },
+  {
+   "check": "sync dive",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible dive",
+   "status": "pass",
+   "detail": "stands out by 2.4 dB in 250-500 Hz over music+voice"
+  },
+  {
+   "check": "sync pin",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible pin",
+   "status": "pass",
+   "detail": "stands out by 2.7 dB in 2000-4000 Hz over music+voice"
+  },
+  {
+   "check": "sync endcard",
+   "status": "pass",
+   "detail": "peak 0.16 frames from its cue"
+  },
+  {
+   "check": "audible endcard",
+   "status": "pass",
+   "detail": "stands out by 3.2 dB in 4000-8000 Hz over music+voice"
+  },
+  {
+   "check": "hero body endcard",
+   "status": "pass",
+   "detail": "main band 4000-8000 Hz lifted 3.2 dB (needs 3)"
+  },
+  {
+   "check": "sync wos",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible wos",
+   "status": "pass",
+   "detail": "stands out by 2.1 dB in 500-1000 Hz over music+voice"
+  },
+  {
+   "check": "sync wamd",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible wamd",
+   "status": "pass",
+   "detail": "stands out by 11.5 dB in 2000-4000 Hz over music+voice"
+  },
+  {
+   "check": "hero body wamd",
+   "status": "pass",
+   "detail": "main band 4000-8000 Hz lifted 3.0 dB (needs 3)"
+  },
+  {
+   "check": "sync wmsh",
+   "status": "pass",
+   "detail": "peak 0.00 frames from its cue"
+  },
+  {
+   "check": "audible wmsh",
+   "status": "pass",
+   "detail": "stands out by 6.6 dB in 2000-4000 Hz over music+voice"
+  },
+  {
    "check": "voice",
    "status": "pass",
-   "detail": "music sits 16.8 LU under the voice (median while speaking)"
+   "detail": "music sits 15.9 LU under the voice (median while speaking)"
   },
   {
    "check": "music",
    "status": "pass",
-   "detail": "median -30.2 LUFS short-term; unplanned dips at []"
+   "detail": "median -29.7 LUFS short-term; unplanned dips at []"
   },
   {
    "check": "silence",

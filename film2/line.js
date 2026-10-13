@@ -146,3 +146,32 @@ const SHAPES = {
   star: (cx, cy, R, r, rot = -Math.PI / 2) => { const o = []; for (let i = 0; i <= 10; i++) { const a = rot + i * Math.PI / 5, q = i % 2 ? r : R; o.push([cx + Math.cos(a) * q, cy + Math.sin(a) * q]); } return o; },
 };
 const densify = (pts, step = 4) => { const o = [pts[0]]; for (let i = 1; i < pts.length; i++) { const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], n = Math.max(1, Math.ceil(Math.hypot(x1 - x0, y1 - y0) / step)); for (let j = 1; j <= n; j++) o.push([lerp(x0, x1, j / n), lerp(y0, y1, j / n)]); } return o; };
+
+// ── v2.1 additions ──
+// Lucide icon (24×24) drawn by the same pen: ring-part flows in from the connector, the rest are pen hops
+LINE.icon = (name, x, y, size, opt = {}) => {
+  const parts = (window.LUCIDE || {})[name]; if (!parts) return [];
+  const subs = [];
+  for (const [d] of parts) LINE.sample(d, opt.step || 2).forEach((sp) => subs.push(LINE.tf(sp, { x, y, cx: 12, cy: 12, sc: size / 24 })));
+  return LINE.add(subs.filter((s) => s.length > 1), opt);
+};
+// LTR "pen reveal" (numbers): wipe edge travels left → right
+function wpenL(Wd, t, s, k) {
+  if (k <= 0) return; const c = LCAM.now, [x, y] = LCAM.w2s(s.wx, s.wy), sc = (s.sc ?? 1) * c.z;
+  const w = Wd.img.width, h = Wd.img.height;
+  g.save(); g.translate(x, y); g.rotate(c.r); g.scale(sc, sc);
+  if (k < 1) { g.beginPath(); g.rect(-w / 2, -h / 2, w * k, h); g.clip(); }
+  g.globalAlpha = s.alpha ?? 1; g.drawImage(Wd.img, -w / 2, -h / 2); g.restore();
+}
+// LTR word (digits reorder in an rtl canvas)
+function ltrWord(text, o = {}) {
+  const size = (o.size || 120) * TS, font = o.font || UI, weight = o.weight || 700, color = o.color || LP.cream;
+  const m = mk(8, 8).getContext('2d'); m.font = `${weight} ${size}px ${font}`; m.direction = 'ltr';
+  const mt = m.measureText(text), pad = Math.ceil(size * .45) + 24;
+  const w = Math.ceil(mt.width), h = Math.ceil(size * (o.lh || 1.5));
+  const c = mk(w + pad * 2, h + pad * 2), x = c.getContext('2d');
+  x.font = m.font; x.direction = 'ltr'; x.textAlign = 'center'; x.textBaseline = 'middle';
+  x.fillStyle = color; x.fillText(text, c.width / 2, c.height / 2);
+  return { img: c, text, w, h, pad, size, style: o };
+}
+const leafD = (L, w) => `M0 0 C ${w} ${-L * .28} ${w * .92} ${-L * .72} 0 ${-L} C ${-w * .92} ${-L * .72} ${-w} ${-L * .28} 0 0 Z`;
